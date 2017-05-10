@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="form">
+    <form name="myForm" id="myform">
+    <lable>First name:</lable><br>
+    <input type="text" id="name" placeholder="First name" required><br>
+    <lable>Second name:</lable><br>
+    <input type="text" id="secondname" placeholder="Second name" required><br>
+    <lable>Birth day:</lable><br>
+    <input type="date" id="datebirth" placeholder="Birth day" required><br>
+    <lable>Email:</lable><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <lable>PESEL:</lable><br>
+    <input id="pesel" placeholder="PESEL" pattern="[0-9]+" type="number" required><br>
+    <lable>NIP:</lable><br>
+    <input id="nip" placeholder="NIP" pattern="[0-9]+" type="number" required><br>
+    <lable>Prawo Jazdy:</lable><br>
+    <input type="date" id="prawa" placeholder="Prawo Jazdy" required><br>
+    <lable>Nomer Konta:</lable><br>
+    <input id="konto" placeholder="Nomer Konta" pattern="[0-9.]+" type="number" required><br>
+        
+        <button onclick="add()" id="write">Write</button>
+
+    
+    </form>
+    <button onclick="clearall()" id="clearall">Clear all records</button>
+</div>
+<div id="allscores">
+    <p>Records:<span id="records">0</span></p>
+</div>
+    
+<script>
+$('#write').attr('disabled', true);
+$('input[required]').keyup(function () {
+    var disable = false;
+       $('input[required]').each(function(){
+            if($(this).val()==""){
+                 disable = true;                
+            }
+       });
+$('#write').prop('disabled', disable);
+});
+</script>    
+    
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+#form{
+    width: 300px;
+    overflow: hidden;
+    float:left;
+
+}
+#allscores{
+    float: left;
+    width: 700px;
+    overflow: hidden;
+}
+#myform input{
+    width: 150px;
+}
+#write{
+    width: 155px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border:1px solid blue;
+    height: 30px;
+    font-weight: bold;
+}
+#clearall{
+    width: 155px;
+    margin-top: 10px;
+    border: 2px solid red;
+}
